@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UzbegimDemo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sms">Iltimos dasturdan foydalanish uchun telefon raqamni kiriting!(Keyingi qadamda telefon raqamga <b>SMS</b> kod boradi)</string>
+    <string name="ilovadan_foydalanish_shartlari"><u>Ilovadan foydalanish shartlari</u></string>
+    <string name="yordam"><u>Yordam</u></string>
+</resources>
