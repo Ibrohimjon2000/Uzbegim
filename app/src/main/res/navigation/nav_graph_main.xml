@@ -25,5 +25,20 @@
         android:name="uz.devapp.uzbegimdemo.screen.main.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" />
 
 </navigation>
