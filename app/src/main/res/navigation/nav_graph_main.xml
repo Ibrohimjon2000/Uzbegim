@@ -40,5 +40,45 @@
         android:name="uz.devapp.uzbegimdemo.screen.main.home.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/myAddressFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.MyAddressFragment"
+        android:label="fragment_my_address"
+        tools:layout="@layout/fragment_my_address" />
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
 
 </navigation>

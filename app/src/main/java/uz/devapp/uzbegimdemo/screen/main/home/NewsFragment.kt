@@ -9,14 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.devapp.uzbegimdemo.R
-import uz.devapp.uzbegimdemo.adapter.ProductAdapter
-import uz.devapp.uzbegimdemo.adapter.ProductAdapterCallback
+import uz.devapp.uzbegimdemo.adapter.NewsAdapter
+import uz.devapp.uzbegimdemo.adapter.NewsAdapterCallback
 import uz.devapp.uzbegimdemo.data.ProductModel
-import uz.devapp.uzbegimdemo.databinding.FragmentProductsBinding
+import uz.devapp.uzbegimdemo.databinding.FragmentNewsBinding
 
-class ProductsFragment : Fragment() {
-    lateinit var binding: FragmentProductsBinding
-    var productList= listOf(
+class NewsFragment : Fragment() {
+    lateinit var binding: FragmentNewsBinding
+    val newsList = listOf(
         ProductModel(1),
         ProductModel(1),
         ProductModel(1),
@@ -29,26 +29,25 @@ class ProductsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding= FragmentProductsBinding.inflate(inflater,container,false)
+        binding = FragmentNewsBinding.inflate(inflater, container, false)
         (requireActivity() as AppCompatActivity).findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility =
             View.GONE
-
-        binding.rv.adapter=ProductAdapter(productList,object :ProductAdapterCallback{
-            override fun onSelectCategory(item: ProductModel) {
-                requireActivity().findNavController(R.id.mainFragmentContainerView)
-                    .navigate(R.id.productDetailFragment)
-            }
-        })
 
         binding.back.setOnClickListener {
             requireActivity().findNavController(R.id.mainFragmentContainerView).popBackStack()
         }
 
+        binding.rv.adapter = NewsAdapter(newsList, object : NewsAdapterCallback {
+            override fun onSelectCategory(item: ProductModel) {
+                requireActivity().findNavController(R.id.mainFragmentContainerView)
+                    .navigate(R.id.newsDetailFragment)
+            }
+        })
         return binding.root
     }
 
     companion object {
         @JvmStatic
-        fun newInstance() = ProductsFragment()
+        fun newInstance() = NewsFragment()
     }
 }

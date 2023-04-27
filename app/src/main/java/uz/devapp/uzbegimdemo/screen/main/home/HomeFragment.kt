@@ -1,12 +1,17 @@
 package uz.devapp.uzbegimdemo.screen.main.home
 
+import android.content.Intent
+import android.graphics.Rect
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.viewbinding.ViewBinding
@@ -39,9 +44,7 @@ class HomeFragment : Fragment() {
     val productList = mutableListOf(
         ProductModel(1),
         ProductModel(1),
-        ProductModel(1),
-        ProductModel(1),
-        ProductModel(1),
+        ProductModel(1)
     )
 
     override fun onCreateView(
@@ -95,6 +98,7 @@ class HomeFragment : Fragment() {
                 optom.background = resources.getDrawable(R.color.white)
                 optomIcon.setColorFilter(resources.getColor(R.color.black))
                 optomText.setTextColor(resources.getColor(R.color.black))
+                scrollToView(scrollView, topCategory)
             }
 
             news.setOnClickListener {
@@ -110,6 +114,7 @@ class HomeFragment : Fragment() {
                 optom.background = resources.getDrawable(R.color.white)
                 optomIcon.setColorFilter(resources.getColor(R.color.black))
                 optomText.setTextColor(resources.getColor(R.color.black))
+                scrollToView(scrollView, newCategory)
             }
 
             sale.setOnClickListener {
@@ -125,6 +130,7 @@ class HomeFragment : Fragment() {
                 optom.background = resources.getDrawable(R.color.white)
                 optomIcon.setColorFilter(resources.getColor(R.color.black))
                 optomText.setTextColor(resources.getColor(R.color.black))
+                scrollToView(scrollView, saleCategory)
             }
 
             optom.setOnClickListener {
@@ -140,6 +146,7 @@ class HomeFragment : Fragment() {
                 sale.background = resources.getDrawable(R.color.white)
                 saleIcon.setColorFilter(resources.getColor(R.color.black))
                 saleText.setTextColor(resources.getColor(R.color.black))
+                scrollToView(scrollView, optomCategory)
             }
 
             carouselView.registerLifecycle(lifecycle)
@@ -181,13 +188,22 @@ class HomeFragment : Fragment() {
 
             navView.setNavigationItemSelectedListener { item ->
                 if (item.itemId == R.id.news) {
-
+                    requireActivity().findNavController(R.id.mainFragmentContainerView)
+                        .navigate(R.id.newsFragment)
                 } else if (item.itemId == R.id.language) {
-
+                    requireActivity().findNavController(R.id.fragmentContainerView)
+                        .navigate(R.id.languageFragment)
                 } else if (item.itemId == R.id.help) {
-
+                    requireActivity().findNavController(R.id.mainFragmentContainerView)
+                        .navigate(R.id.helpFragment)
                 } else if (item.itemId == R.id.share) {
-
+                    var share = Intent()
+                    share.action = Intent.ACTION_SEND
+                    share.putExtra(Intent.EXTRA_SUBJECT, "Subject Here")
+                    share.putExtra(Intent.EXTRA_TEXT, "Test uchun")
+                    share.type = "text/plain"
+                    share = Intent.createChooser(share, "Share Via: ")
+                    requireContext().startActivity(share)
                 } else if (item.itemId == R.id.documentText) {
 
                 }
@@ -235,6 +251,16 @@ class HomeFragment : Fragment() {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+    }
+
+    fun scrollToView(scrollView: NestedScrollView, view: View) {
+        view.requestFocus()
+
+        val scrollBounds = Rect()
+        scrollView.getHitRect(scrollBounds)
+        if (!view.getLocalVisibleRect(scrollBounds)) {
+            Handler().post(Runnable { scrollView.smoothScrollTo(0, view.top) })
         }
     }
 }
