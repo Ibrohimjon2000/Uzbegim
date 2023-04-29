@@ -88,7 +88,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="12:12"
+                android:text="00:00"
                 android:textColor="#3C3C3C"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

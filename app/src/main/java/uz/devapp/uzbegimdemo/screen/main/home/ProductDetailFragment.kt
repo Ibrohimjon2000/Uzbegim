@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.adapter.ProductAdapter2
 import uz.devapp.uzbegimdemo.adapter.ProductAdapter2Callback
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.FragmentProductDetailBinding
 
 class ProductDetailFragment : Fragment() {

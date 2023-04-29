@@ -230,8 +230,8 @@
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checked="true"
                         android:buttonTint="#27AE60"
+                        android:checked="true"
                         android:fontFamily="@font/raleway_light"
                         android:text="Hisob raqam (bankomat, mobile bank)" />
 
@@ -244,6 +244,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:buttonTint="#27AE60"
                             android:clickable="false"
                             android:fontFamily="@font/raleway_light"
                             android:text="Bank karta" />
@@ -440,6 +441,7 @@
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginLeft="16dp"

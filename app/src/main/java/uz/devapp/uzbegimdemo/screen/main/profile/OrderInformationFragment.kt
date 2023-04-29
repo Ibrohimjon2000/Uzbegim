@@ -5,30 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.devapp.uzbegimdemo.R
-import uz.devapp.uzbegimdemo.databinding.FragmentAddressBinding
+import uz.devapp.uzbegimdemo.adapter.OrderInformationAdapter
+import uz.devapp.uzbegimdemo.data.model.ProductModel
+import uz.devapp.uzbegimdemo.databinding.FragmentOrderInformationBinding
 
-class AddressFragment : Fragment() {
-    lateinit var binding:FragmentAddressBinding
+class OrderInformationFragment : Fragment() {
+    lateinit var binding: FragmentOrderInformationBinding
+    val itemList = listOf(
+        ProductModel(1),
+        ProductModel(1),
+        ProductModel(1),
+        ProductModel(1),
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding= FragmentAddressBinding.inflate(inflater,container,false)
-        (requireActivity() as AppCompatActivity).findViewById<BottomNavigationView>(R.id.bottomNavigationView).visibility =
-            View.GONE
+        binding = FragmentOrderInformationBinding.inflate(inflater, container, false)
         binding.back.setOnClickListener {
             requireActivity().findNavController(R.id.mainFragmentContainerView).popBackStack()
         }
+        binding.rv.adapter = OrderInformationAdapter(itemList)
         return binding.root
     }
 
     companion object {
         @JvmStatic
-        fun newInstance() = AddressFragment()
+        fun newInstance() = OrderInformationFragment()
     }
 }

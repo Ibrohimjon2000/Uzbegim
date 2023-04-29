@@ -4,13 +4,13 @@ import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.ItemProductBinding
 
 interface ProductAdapterCallback {
     fun onSelectCategory(item: ProductModel)
 }
-class ProductAdapter(val items:List<ProductModel>,val callback: ProductAdapterCallback):RecyclerView.Adapter<ProductAdapter.Vh>() {
+class ProductAdapter(val items:List<ProductModel>, val callback: ProductAdapterCallback):RecyclerView.Adapter<ProductAdapter.Vh>() {
 
     inner class Vh(val binding: ItemProductBinding):RecyclerView.ViewHolder(binding.root)
 

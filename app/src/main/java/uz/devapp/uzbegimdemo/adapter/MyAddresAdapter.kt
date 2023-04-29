@@ -3,7 +3,7 @@ package uz.devapp.uzbegimdemo.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.ItemAddressBinding
 
 interface MyAddressAdapterCallback {

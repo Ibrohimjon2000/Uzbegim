@@ -62,9 +62,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="Telefon raqam(998XX XXX XX XX)"
+                android:hint="Telefon raqam(010 XXXX XXXX)"
                 android:inputType="phone"
-                android:maxLength="12"
+                android:maxLength="11"
                 android:padding="10dp" />
 
         </LinearLayout>

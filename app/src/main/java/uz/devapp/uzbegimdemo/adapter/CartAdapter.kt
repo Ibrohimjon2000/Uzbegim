@@ -4,11 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.ItemCartBinding
-import uz.devapp.uzbegimdemo.databinding.ItemCategoryBinding
 
-class CartAdapter(val items: List<ProductModel>,val bool:Boolean) : RecyclerView.Adapter<CartAdapter.Vh>() {
+class CartAdapter(val items: List<ProductModel>, val bool:Boolean) : RecyclerView.Adapter<CartAdapter.Vh>() {
 
     inner class Vh(val binding: ItemCartBinding) : RecyclerView.ViewHolder(binding.root)
 

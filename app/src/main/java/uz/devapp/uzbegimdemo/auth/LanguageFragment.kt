@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.databinding.FragmentLanguageBinding
 
+@AndroidEntryPoint
 class LanguageFragment : Fragment() {
     lateinit var binding: FragmentLanguageBinding
 

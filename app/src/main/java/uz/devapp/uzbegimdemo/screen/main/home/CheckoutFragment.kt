@@ -24,6 +24,10 @@ class CheckoutFragment : Fragment() {
             requireActivity().findNavController(R.id.mainFragmentContainerView)
                 .navigate(R.id.myAddressFragment)
         }
+        binding.btnConfirm.setOnClickListener {
+            requireActivity().findNavController(R.id.mainFragmentContainerView)
+                .navigate(R.id.orderDetailFragment)
+        }
         return binding.root
     }
 

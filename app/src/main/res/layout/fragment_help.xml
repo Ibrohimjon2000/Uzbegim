@@ -42,6 +42,8 @@
 
     </androidx.cardview.widget.CardView>
 
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -68,22 +70,14 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="30dp"
                 android:src="@drawable/telegram" />
 
             <ImageView
                 android:id="@+id/instagram"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="30dp"
                 android:src="@drawable/instagram" />
-
-            <ImageView
-                android:id="@+id/whatsapp"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/whatsapp" />
 
         </LinearLayout>
 

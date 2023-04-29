@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.findNavController
 import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.adapter.CategoryAdapter
 import uz.devapp.uzbegimdemo.adapter.CategoryAdapterCallback
-import uz.devapp.uzbegimdemo.adapter.ProductAdapter
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.FragmentCategoryBinding
 
 private const val ARG_PARAM1 = "param1"

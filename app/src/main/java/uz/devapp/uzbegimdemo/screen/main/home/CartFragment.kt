@@ -1,17 +1,16 @@
 package uz.devapp.uzbegimdemo.screen.main.home
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.adapter.CartAdapter
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {

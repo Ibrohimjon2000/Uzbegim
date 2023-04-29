@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.core.widget.NestedScrollView
@@ -23,7 +22,7 @@ import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.adapter.ProductAdapter
 import uz.devapp.uzbegimdemo.adapter.ProductAdapterCallback
 import uz.devapp.uzbegimdemo.adapter.ViewPager2FragmentAdapter
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.FragmentHomeBinding
 import uz.devapp.uzbegimdemo.databinding.ItemCustomFixedBinding
 

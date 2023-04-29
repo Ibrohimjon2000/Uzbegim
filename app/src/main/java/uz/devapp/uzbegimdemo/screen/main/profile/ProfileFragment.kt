@@ -28,14 +28,15 @@ class ProfileFragment : Fragment() {
             }
             address.setOnClickListener {
                 requireActivity().findNavController(R.id.mainFragmentContainerView)
-                    .navigate(R.id.addressFragment)
+                    .navigate(R.id.myAddressFragment)
             }
             language.setOnClickListener {
                 requireActivity().findNavController(R.id.fragmentContainerView)
                     .navigate(R.id.languageFragment)
             }
             phone.setOnClickListener {
-
+                val fragment = EditPhoneFragment.newInstance()
+                fragment.show(requireActivity().supportFragmentManager, fragment.tag)
             }
             help.setOnClickListener {
                 requireActivity().findNavController(R.id.mainFragmentContainerView)

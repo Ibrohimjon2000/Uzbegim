@@ -3,14 +3,14 @@ package uz.devapp.uzbegimdemo.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.devapp.uzbegimdemo.data.ProductModel
+import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.ItemCategoryBinding
 
 interface CategoryAdapterCallback {
     fun onSelectCategory(item: ProductModel)
 }
 
-class CategoryAdapter(val items: List<ProductModel>,val callback: CategoryAdapterCallback) : RecyclerView.Adapter<CategoryAdapter.Vh>() {
+class CategoryAdapter(val items: List<ProductModel>, val callback: CategoryAdapterCallback) : RecyclerView.Adapter<CategoryAdapter.Vh>() {
 
     inner class Vh(val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root)
 
