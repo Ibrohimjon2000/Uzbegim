@@ -1,4 +1,4 @@
-package uz.devapp.uzbegimdemo.screen.main.profile
+package uz.devapp.uzbegimdemo.screen.main.cart.checkout.order
 
 import android.content.ClipData
 import android.content.ClipboardManager

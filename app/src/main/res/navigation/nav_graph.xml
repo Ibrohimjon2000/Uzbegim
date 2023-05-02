@@ -87,5 +87,6 @@
         android:id="@+id/mainFragment"
         android:name="uz.devapp.uzbegimdemo.screen.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+    </fragment>
 </navigation>

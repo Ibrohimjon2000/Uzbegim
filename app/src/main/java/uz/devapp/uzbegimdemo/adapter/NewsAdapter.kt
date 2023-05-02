@@ -3,14 +3,19 @@ package uz.devapp.uzbegimdemo.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.devapp.uzbegimdemo.data.model.ProductModel
+import uz.devapp.uzbegimdemo.data.model.NewsModel
 import uz.devapp.uzbegimdemo.databinding.ItemNewsBinding
+import uz.devapp.uzbegimdemo.utils.loadImage
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 interface NewsAdapterCallback {
-    fun onSelectCategory(item: ProductModel)
+    fun onSelectCategory(item: NewsModel)
 }
 
-class NewsAdapter(val items: List<ProductModel>, val callback: NewsAdapterCallback) : RecyclerView.Adapter<NewsAdapter.Vh>() {
+class NewsAdapter(val items: List<NewsModel>, val callback: NewsAdapterCallback) :
+    RecyclerView.Adapter<NewsAdapter.Vh>() {
 
     inner class Vh(val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -26,6 +31,18 @@ class NewsAdapter(val items: List<ProductModel>, val callback: NewsAdapterCallba
         val item = items[position]
         holder.itemView.setOnClickListener {
             callback.onSelectCategory(item)
+        }
+        holder.binding.image.loadImage(item.image)
+        holder.binding.tvTitle.text = item.titleUz
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSSSSS")
+        var convertedDate: Date
+        try {
+            convertedDate = dateFormat.parse(item.createdAt)
+
+            val formateDate = SimpleDateFormat("dd.MM.YYYY HH:mm").format(convertedDate)
+            holder.binding.tvTime.text = formateDate
+        } catch (e: ParseException) {
+            e.printStackTrace()
         }
     }
 }

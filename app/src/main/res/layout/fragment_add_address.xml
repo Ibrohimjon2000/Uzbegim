@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".screen.main.profile.AddAddressFragment">
+    tools:context=".screen.main.cart.checkout.address.AddAddressFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"

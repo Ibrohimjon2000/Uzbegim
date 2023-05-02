@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:orientation="vertical"
-    tools:context=".screen.main.home.CheckoutFragment">
+    tools:context=".screen.main.cart.checkout.CheckoutFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"

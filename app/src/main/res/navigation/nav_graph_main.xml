@@ -24,65 +24,66 @@
         android:id="@+id/profileFragment"
         android:name="uz.devapp.uzbegimdemo.screen.main.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.CartFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/productsFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.ProductsFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.product.ProductsFragment"
         android:label="fragment_products"
         tools:layout="@layout/fragment_products" />
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.ProductDetailFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.product.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" />
     <fragment
         android:id="@+id/newsFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.NewsFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.news.NewsFragment"
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/newsDetailFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.NewsDetailFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.home.news.NewsDetailFragment"
         android:label="fragment_news_detail"
         tools:layout="@layout/fragment_news_detail" />
     <fragment
         android:id="@+id/helpFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.HelpFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.help.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/ordersFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.profile.OrdersFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.profile.orderhistory.OrdersFragment"
         android:label="fragment_orders"
         tools:layout="@layout/fragment_orders" />
     <fragment
         android:id="@+id/checkoutFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.home.CheckoutFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.checkout.CheckoutFragment"
         android:label="fragment_checkout"
         tools:layout="@layout/fragment_checkout" />
     <fragment
         android:id="@+id/myAddressFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.profile.MyAddressFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.checkout.address.MyAddressFragment"
         android:label="fragment_my_address"
         tools:layout="@layout/fragment_my_address" />
     <fragment
         android:id="@+id/addAddressFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.profile.AddAddressFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.checkout.address.AddAddressFragment"
         android:label="fragment_add_address"
         tools:layout="@layout/fragment_add_address" />
     <fragment
         android:id="@+id/orderDetailFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.profile.OrderDetailFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.checkout.order.OrderDetailFragment"
         android:label="fragment_order_detail"
         tools:layout="@layout/fragment_order_detail" />
     <fragment
         android:id="@+id/orderInformationFragment"
-        android:name="uz.devapp.uzbegimdemo.screen.main.profile.OrderInformationFragment"
+        android:name="uz.devapp.uzbegimdemo.screen.main.cart.checkout.order.OrderInformationFragment"
         android:label="fragment_order_information"
         tools:layout="@layout/fragment_order_information" />
 

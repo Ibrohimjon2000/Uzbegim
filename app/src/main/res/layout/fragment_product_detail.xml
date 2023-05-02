@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".screen.main.home.ProductDetailFragment">
+    tools:context=".screen.main.home.product.ProductDetailFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -25,19 +25,21 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/cardViewImage"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:background="@drawable/product_detail_image_backgorund">
+                    android:layout_height="250dp">
 
                     <ImageView
+                        android:id="@+id/image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/photo" />
+                        android:src="@drawable/placeholder" />
 
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -45,7 +47,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/raleway_bold"
                     android:maxLines="2"
-                    android:text="Mol biqin laxm go'sht"
+                    tools:text="Mol biqin laxm go'sht"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -77,10 +79,11 @@
                                 app:cardElevation="0dp">
 
                                 <TextView
+                                    android:id="@+id/price"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="6dp"
-                                    android:text="75 000 сум"
+                                    tools:text="75 000 сум"
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
 
@@ -91,10 +94,19 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
                                 android:fontFamily="@font/raleway_light"
-                                android:text="/ Kg"
+                                android:text="/"
                                 android:textColor="@color/black"
                                 android:textSize="16sp" />
 
+                            <TextView
+                                android:id="@+id/unity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:fontFamily="@font/raleway_light"
+                                android:text="Kg"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <TextView
@@ -103,7 +115,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="8dp"
-                            android:text="85 000 сум"
+                            tools:text="85 000 сум"
                             android:textColor="#AAAAAA"
                             android:textSize="15sp" />
 
@@ -128,7 +140,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
-                                android:text="921"
+                                tools:text="921"
                                 android:textColor="#F3C402"
                                 android:textSize="16sp" />
 
@@ -220,11 +232,12 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvProductAbout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:fontFamily="@font/raleway_light"
-                    android:text="@string/info"
+                    tools:text="@string/info"
                     android:textColor="#787878"
                     android:textSize="16sp" />
 
@@ -250,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_product_2" />
+                    tools:listitem="@layout/item_product_vertical" />
 
             </LinearLayout>
 
@@ -308,6 +321,7 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/addCart"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_margin="16dp"

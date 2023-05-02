@@ -2,7 +2,7 @@ package uz.devapp.uzbegimdemo.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import uz.devapp.uzbegimdemo.screen.main.home.CategoryFragment
+import uz.devapp.uzbegimdemo.screen.main.home.category.CategoryFragment
 
 class ViewPager2FragmentAdapter(
     fragment: Fragment,

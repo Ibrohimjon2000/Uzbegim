@@ -1,4 +1,4 @@
-package uz.devapp.uzbegimdemo.screen.main.home
+package uz.devapp.uzbegimdemo.screen.main.cart
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.adapter.CartAdapter
 import uz.devapp.uzbegimdemo.data.model.ProductModel
 import uz.devapp.uzbegimdemo.databinding.FragmentCartBinding
 
+@AndroidEntryPoint
 class CartFragment : Fragment() {
     lateinit var binding: FragmentCartBinding
     lateinit var cartAdapter: CartAdapter

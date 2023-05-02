@@ -1,4 +1,4 @@
-package uz.devapp.uzbegimdemo.screen.main.profile
+package uz.devapp.uzbegimdemo.screen.main.cart.checkout.address
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

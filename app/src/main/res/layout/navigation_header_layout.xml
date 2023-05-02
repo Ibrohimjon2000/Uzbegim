@@ -47,13 +47,34 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/lyRegistration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:orientation="vertical">
+        android:background="@drawable/add_favorite_icon_background"
+        android:gravity="center"
+        android:padding="8dp">
 
         <TextView
-            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Ro'yhatdan o'tish"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/navViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_light"
@@ -71,7 +92,7 @@
             app:cardElevation="0dp">
 
             <TextView
-                android:id="@+id/tvNumber"
+                android:id="@+id/navViewNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="6dp"
@@ -100,7 +121,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvKeshbek"
+                android:id="@+id/navViewKeshbek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"

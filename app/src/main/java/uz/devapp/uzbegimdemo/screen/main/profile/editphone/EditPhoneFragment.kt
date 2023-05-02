@@ -1,12 +1,10 @@
-package uz.devapp.uzbegimdemo.screen.main.profile
+package uz.devapp.uzbegimdemo.screen.main.profile.editphone
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import uz.devapp.uzbegimdemo.R
 import uz.devapp.uzbegimdemo.databinding.FragmentEditPhoneBinding
 
 class EditPhoneFragment : BottomSheetDialogFragment() {

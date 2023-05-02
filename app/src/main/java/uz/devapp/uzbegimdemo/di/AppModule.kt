@@ -18,6 +18,7 @@ import uz.devapp.uzbegimdemo.data.repository.AuthRepository
 import uz.devapp.uzbegimdemo.data.repository.MainRepository
 import uz.devapp.uzbegimdemo.utils.Constants
 import uz.devapp.uzbegimdemo.utils.PrefUtils
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -60,9 +61,12 @@ class AppModule {
             val request = chain.request().newBuilder()
                 .addHeader("Token", PrefUtils.getToken())
                 .build()
-            Log.d("IN", "Token: ${PrefUtils.getToken()}")
             chain.proceed(request)
         }
+        builder.connectTimeout(15, TimeUnit.SECONDS)
+        builder.readTimeout(15, TimeUnit.SECONDS)
+        builder.writeTimeout(15, TimeUnit.SECONDS)
+
         if (BuildConfig.DEBUG) {
             builder.addInterceptor(
                 ChuckerInterceptor.Builder(context)

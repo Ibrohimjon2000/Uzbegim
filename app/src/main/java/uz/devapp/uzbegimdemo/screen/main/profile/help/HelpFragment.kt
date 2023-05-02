@@ -1,4 +1,4 @@
-package uz.devapp.uzbegimdemo.screen.main.home
+package uz.devapp.uzbegimdemo.screen.main.profile.help
 
 import android.Manifest
 import android.content.Intent

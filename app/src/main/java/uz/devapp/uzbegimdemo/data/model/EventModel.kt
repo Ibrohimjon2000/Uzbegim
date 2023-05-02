@@ -1,6 +1,6 @@
 package uz.devapp.uzbegimdemo.data.model
 
-data class EventModel<T>(
+data class EventModel(
     val command:Int,
-    val data:T
+    val data:Any
 )

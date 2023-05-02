@@ -45,7 +45,7 @@ class PhoneConfirmationFragment : Fragment() {
             requireActivity().findNavController(R.id.fragmentContainerView).popBackStack()
         }
 
-        binding.tvPhone.setText(param1.toString())
+        binding.tvPhone.text = param1.toString()
 
         viewModel.confirmLiveData.observe(requireActivity()) {
             when (it) {
@@ -66,6 +66,24 @@ class PhoneConfirmationFragment : Fragment() {
                     PrefUtils.setToken(it.result.token)
                     requireActivity().findNavController(R.id.fragmentContainerView)
                         .navigate(R.id.action_phoneConfirmationFragment_to_mainFragment)
+                    viewModel.getUser()
+                }
+            }
+        }
+
+        viewModel.userLiveData.observe(requireActivity()){
+            when(it){
+                is DataResult.Error -> {
+                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                }
+                is DataResult.LoadingHide -> {
+
+                }
+                is DataResult.LoadingShow -> {
+
+                }
+                is DataResult.Success -> {
+                    PrefUtils.setUser(it.result)
                 }
             }
         }

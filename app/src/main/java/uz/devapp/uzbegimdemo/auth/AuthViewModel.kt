@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import uz.devapp.uzbegimdemo.data.model.UserModel
 import uz.devapp.uzbegimdemo.data.model.response.ConfirmResponse
 import uz.devapp.uzbegimdemo.data.repository.AuthRepository
 import uz.devapp.uzbegimdemo.data.repository.BaseRepository
@@ -22,6 +23,9 @@ class AuthViewModel @Inject constructor(private val repository: AuthRepository) 
     private var _confirmLiveData = MutableLiveData<DataResult<ConfirmResponse>>()
     var confirmLiveData: LiveData<DataResult<ConfirmResponse>> = _confirmLiveData
 
+    private var _userLiveData = MutableLiveData<DataResult<UserModel>>()
+    var userLiveData: LiveData<DataResult<UserModel>> = _userLiveData
+
     fun login(phone: String) {
         viewModelScope.launch {
             repository.login(phone).collect {
@@ -34,6 +38,14 @@ class AuthViewModel @Inject constructor(private val repository: AuthRepository) 
         viewModelScope.launch {
             repository.confirm(fullname, phone, smsCode).collect {
                 _confirmLiveData.value =it
+            }
+        }
+    }
+
+    fun getUser() {
+        viewModelScope.launch {
+            repository.getUser().collect {
+                _userLiveData.value = it
             }
         }
     }

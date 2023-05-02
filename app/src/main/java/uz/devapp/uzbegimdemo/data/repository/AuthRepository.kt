@@ -29,4 +29,15 @@ class AuthRepository(private val api: Api) : BaseRepository() {
             emit(DataResult.Error(result.message()))
         }
     }
+
+    suspend fun getUser()= flow {
+        emit(DataResult.LoadingShow())
+        val result=api.getUser()
+        if (result.isSuccessful){
+            emit(DataResult.LoadingHide())
+            emit(DataResult.Success(result.body()?.data!!))
+        }else{
+            emit(DataResult.Error(result.message()))
+        }
+    }
 }
